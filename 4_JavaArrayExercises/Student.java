@@ -4,7 +4,7 @@ public class Student {
     String name;
     int[] marks;
 
-    public Student(String n, int[] m) {
+    public Student(String n, int... m) {
         this.name = n;
         this.marks = m;
     }
@@ -49,8 +49,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        int[] marks = {98, 99, 100};
-        Student student = new Student("Lucas", marks);
+        Student student = new Student("Lucas", 98, 99, 100);
         System.out.println("Number of marks: " + student.getNumberOfMarks());
         System.out.println("Total sum of marks: " + student.getTotalSumOfMarks());
         System.out.println("Max Marks: " + student.getMaximumMark());
