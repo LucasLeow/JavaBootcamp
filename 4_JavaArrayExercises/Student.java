@@ -51,6 +51,19 @@ public class Student {
         return avg.divide(new BigDecimal(Integer.toString(this.marks.size())));
     }
 
+    public void addNewMark(int m) {
+        this.marks.add(m);
+    }
+
+    public void removeMarkAtIndex(int i) {
+        if (i >= this.marks.size() || i < 0) return;
+        this.marks.remove(i);
+    }
+
+    public void printMarks() {
+        System.out.println(this.marks);
+    }
+
     public static void main(String[] args) {
         Student student = new Student("Lucas", 98, 99, 100);
         System.out.println("Number of marks: " + student.getNumberOfMarks());
@@ -58,6 +71,9 @@ public class Student {
         System.out.println("Max Marks: " + student.getMaximumMark());
         System.out.println("Min Marks: " + student.getMinimumMark());
         System.out.println("Average Marks: " + student.getAverageMarks());
+        student.addNewMark(75);
+        student.removeMarkAtIndex(2);
+        student.printMarks();
     }
 
 }
