@@ -1,40 +1,43 @@
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Student {
     String name;
-    int[] marks;
+    ArrayList<Integer> marks = new ArrayList<Integer>();
 
     public Student(String n, int... m) {
         this.name = n;
-        this.marks = m;
+        for (int mark: m) {
+            this.marks.add(mark);
+        }
     }
 
     public int getNumberOfMarks() {
-        return this.marks.length;
+        return this.marks.size();
     }
 
     public int getTotalSumOfMarks() {
         int sum = 0;
-        for (int i = 0; i < this.marks.length; i++) {
-            sum += this.marks[i];
+        for (int i = 0; i < this.marks.size(); i++) {
+            sum += this.marks.get(i);
         }
         return sum;
     }
 
     public int getMaximumMark() {
-        int max = this.marks[0];
+        int max = this.marks.get(0);
 
-        for (int i = 0; i < this.marks.length; i++) {
-            if (this.marks[i] > max) max = this.marks[i];
+        for (int i = 0; i < this.marks.size(); i++) {
+            if (this.marks.get(i) > max) max = this.marks.get(i);
         }
         return max;
     }
 
     public int getMinimumMark() {
-        int min = this.marks[0];
+        int min = this.marks.get(0);
 
-        for (int i = 0; i < this.marks.length; i++) {
-            if (this.marks[i] < min) min = this.marks[i];
+        for (int i = 0; i < this.marks.size(); i++) {
+            if (this.marks.get(i) < min) min = this.marks.get(i);
         }
         return min;
     }
@@ -42,10 +45,10 @@ public class Student {
     public BigDecimal getAverageMarks() {
         BigDecimal avg = new BigDecimal("0");
 
-        for (int i = 0; i < this.marks.length; i++) {
-            avg = avg.add(new BigDecimal(Integer.toString(this.marks[i])));
+        for (int i = 0; i < this.marks.size(); i++) {
+            avg = avg.add(new BigDecimal(Integer.toString(this.marks.get(i))));
         }
-        return avg.divide(new BigDecimal(Integer.toString(this.marks.length)));
+        return avg.divide(new BigDecimal(Integer.toString(this.marks.size())));
     }
 
     public static void main(String[] args) {
