@@ -11,7 +11,6 @@ class StringLengthComparator implements Comparator<String> {
 }
 
 public class QueueRunner {
-
     public static void main(String[] args) {
         Queue<String> queue = new PriorityQueue<>(new StringLengthComparator());
         queue.addAll(List.of("Zebra", "Monkey", "Cat"));
