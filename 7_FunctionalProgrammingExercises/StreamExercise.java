@@ -15,11 +15,16 @@ public class StreamExercise {
         strList.stream().map(str -> str.toLowerCase()).forEach(str -> System.out.println(str));
     }
 
+    public static void printStrLength(List<String> strList) {
+        strList.stream().map(str -> str.length()).forEach(len -> System.out.println(len));
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers = List.of(4, 6, 8, 13, 3, 15);
         List<String> strList = List.of("Apple", "Ant", "Bat");
 
 //        printFirst10Squares(numbers);
 //        makeLowercase(strList);
+        printStrLength(strList);
     }
 }
