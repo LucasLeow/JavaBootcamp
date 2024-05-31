@@ -1,4 +1,4 @@
-package com.lucas.learn_spring_framework;
+package com.lucas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
