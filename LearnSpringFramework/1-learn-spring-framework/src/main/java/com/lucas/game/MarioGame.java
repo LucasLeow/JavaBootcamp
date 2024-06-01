@@ -1,7 +1,9 @@
 package com.lucas.game;
 
 import com.lucas.GamingConsole;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MarioGame implements GamingConsole {
     public void up() {
         System.out.println("Jump");
