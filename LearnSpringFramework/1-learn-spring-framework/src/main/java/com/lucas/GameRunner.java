@@ -2,10 +2,11 @@ package com.lucas;
 
 import com.lucas.game.MarioGame;
 
+
 public class GameRunner {
-    MarioGame game;
-    public GameRunner(MarioGame marioGame) {
-        this.game = marioGame;
+    private GamingConsole game;
+    public GameRunner(GamingConsole game) {
+        this.game = game;
     }
 
     public void run() {

@@ -1,6 +1,8 @@
 package com.lucas.game;
 
-public class MarioGame {
+import com.lucas.GamingConsole;
+
+public class MarioGame implements GamingConsole {
     public void up() {
         System.out.println("Jump");
     }
