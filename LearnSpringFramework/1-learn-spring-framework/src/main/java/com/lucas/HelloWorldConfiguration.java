@@ -8,6 +8,11 @@ public class HelloWorldConfiguration {
 
     @Bean
     public String name() {
-        return "Name here";
+        return "Luke";
+    }
+
+    @Bean
+    public int age() {
+        return 20;
     }
 }
