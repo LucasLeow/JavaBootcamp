@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Component
-public class BusinessCalculatorService {
-    private DataService dataService;
+public class BusinessCalculatorService { // performs the business logic
+    private DataService dataService; // to perform retrieval of data
 
-    @Autowired
+    @Autowired // constructor dependency injection
     public BusinessCalculatorService(DataService ds) {
         this.dataService = ds;
     }
