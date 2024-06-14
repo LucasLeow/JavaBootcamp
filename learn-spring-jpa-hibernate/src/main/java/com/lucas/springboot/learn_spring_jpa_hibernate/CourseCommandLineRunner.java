@@ -7,8 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseCommandLineRunner implements CommandLineRunner {
 
+//    @Autowired
+//    private CourseJdbcRepository repo;
     @Autowired
-    private CourseJdbcRepository repo;
+    private CourseJpaRepository repo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -16,5 +18,6 @@ public class CourseCommandLineRunner implements CommandLineRunner {
         repo.insert(new Course(2, "Learning JavaScript", "Lucas"));
         repo.deleteById(2);
 
+        System.out.println(repo.getById(1));
     }
 }

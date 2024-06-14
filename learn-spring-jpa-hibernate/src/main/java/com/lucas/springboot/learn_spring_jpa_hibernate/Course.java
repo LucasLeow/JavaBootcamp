@@ -1,10 +1,23 @@
 package com.lucas.springboot.learn_spring_jpa_hibernate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Entity
 public class Course {
+    @Id
     private long id;
+    @Column(name="name")
     private String name;
+    @Column(name="author")
     private String author;
 
+    public Course() {
+
+    }
+    @Autowired
     public Course(long id, String name, String author) {
         this.id = id;
         this.name = name;
